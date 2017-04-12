@@ -34,4 +34,38 @@ table {
 body {
   font-family: 'Montserrat', sans-serif; }
 
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 34px; }
+
+h2 {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: capitalize; }
+
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: capitalize; }
+
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize; }
+
+h5 {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize; }
+
+h6 {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize; }
+
+.wrapper {
+  width: 1130px; }
+
 /*# sourceMappingURL=styles.css.map */
