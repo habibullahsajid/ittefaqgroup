@@ -1,3 +1,51 @@
-.wrapper{
+.ig-wrapper {
     width: 1130px;
+    margin: 0 auto;
+    display: block;
+}
+
+.ig-button-1 {
+    padding: 10px 12px;
+    font-size: 12px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    background: #f9f9f9;
+    border: 2px solid #c6c6c6;
+    font-weight: 700;
+    height: 24px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #222222;
+    &:hover {
+        border: 2px solid #fab702;
+        text-decoration: none;
+    }
+}
+.ig-button-2{
+    &:hover{
+        
+    }
+}
+.clear{
+    clear: both;
+}
+
+@media (min-width: 1025px) {
+    .align-center {
+        text-align: center;
+    }
+    .align-left{
+        width: 45%;
+        display: inline-block;
+        margin: 0 20px 0 0;
+        float: left;
+    }
+    .align-right{
+        width: 45%;
+        display: inline-block;
+        margin: 0 0 0 20px;
+        float: right;
+    }
 }
