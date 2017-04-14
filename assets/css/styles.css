@@ -109,9 +109,19 @@ p {
     text-decoration: underline; }
   p del, p s {
     text-decoration: line-through; }
+  p sub {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    color: #808080;
+    display: inline;
+    font-weight: bold; }
 
 tt, code, kbd, samp {
-  font-family: monospace; }
+  font-family: monospace;
+  color: #8b0000;
+  font-size: 13px;
+  background: #EEE;
+  text-align: justify; }
 
 blockquote, q {
   display: block;
@@ -125,6 +135,11 @@ blockquote, q {
   -moz-box-shadow: 2px 2px 15px #ccc;
   -webkit-box-shadow: 2px 2px 15px #ccc;
   box-shadow: 2px 2px 15px #ccc; }
+
+pre {
+  font-family: 'PT Sans', sans-serif;
+  padding: 10px;
+  text-align: justify; }
 
 img {
   height: auto;
@@ -164,16 +179,37 @@ input[type="tel"], input[type="search"], input[type="number"], textarea {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07);
   background-color: #fff;
   color: #32373c;
-  margin-left: 20px;
   outline: 0;
   -webkit-transition: 50ms border-color ease-in-out;
   transition: 50ms border-color ease-in-out;
   margin-bottom: 20px; }
 
+ul {
+  padding: 20px;
+  list-style-type: disc; }
+  ul li {
+    padding: 5px;
+    margin-left: 35px;
+    line-height: 20px;
+    font-size: 14px; }
+
+ol {
+  padding: 20px;
+  list-style-type: decimal; }
+  ol li {
+    padding: 5px;
+    line-height: 20px;
+    font-size: 14px;
+    margin-left: 35px; }
+
 .ig-wrapper {
   width: 1130px;
   margin: 0 auto;
-  display: block; }
+  display: block;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
+  -moz-transition: -moz-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
+  transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9); }
 
 .ig-button-1 {
   padding: 10px 12px;
@@ -193,6 +229,17 @@ input[type="tel"], input[type="search"], input[type="number"], textarea {
     border: 2px solid #fab702;
     text-decoration: none; }
 
+.ig-button-2 {
+  background: #fab702;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px 7px;
+  border-radius: 2px; }
+
 .clear {
   clear: both; }
 
@@ -211,5 +258,88 @@ input[type="tel"], input[type="search"], input[type="number"], textarea {
     display: inline-block;
     margin: 0 0 0 20px;
     float: right; } }
+header {
+  height: 95px;
+  background: #000000;
+  padding-top: 30px; }
+  header #ig-social-bar {
+    float: right;
+    display: inline-block; }
+    header #ig-social-bar p {
+      font-family: 'Montserrat', sans-serif;
+      color: #ffffff;
+      display: inline; }
+    header #ig-social-bar a {
+      text-decoration: none;
+      color: #ffffff; }
+    header #ig-social-bar .fa {
+      border: 1px solid #fff;
+      border-radius: 100%;
+      padding: 5px;
+      width: 13px;
+      height: 13px;
+      font-size: 13px;
+      text-align: center; }
+  header .ig-logo {
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff; }
+    header .ig-logo a {
+      background: url("../imgs/logo.png") no-repeat;
+      background-size: cover;
+      width: 216px;
+      height: 50px;
+      display: inline-block;
+      margin: 0 auto;
+      text-indent: -9000px; }
+  header .ig-nav-button {
+    color: #fff;
+    position: absolute;
+    top: 70px;
+    font-size: 16px;
+    right: 118px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    opacity: 1;
+    -moz-transition: opacity .3s linear;
+    -webkit-transition: opacity .3s linear;
+    transition: opacity .3s linear; }
+    header .ig-nav-button:hover {
+      text-decoration: none; }
+  header #ig-main-nav {
+    background: #000000;
+    position: absolute;
+    left: 0;
+    top: 125px;
+    height: 100%;
+    min-width: 200px; }
+    header #ig-main-nav .ig-nav-list {
+      list-style: none;
+      margin: 0px;
+      padding: 0px; }
+      header #ig-main-nav .ig-nav-list li {
+        margin: 0px;
+        padding: 0 15px;
+        position: relative;
+        line-height: 15px; }
+        header #ig-main-nav .ig-nav-list li:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 15px;
+          right: 15px;
+          border-bottom: 1px solid #343535; }
+        header #ig-main-nav .ig-nav-list li a {
+          color: #fff;
+          font-size: 15px;
+          font-weight: normal;
+          display: block;
+          padding: 15px 0; }
+          header #ig-main-nav .ig-nav-list li a:hover {
+            color: #fab702; }
 
 /*# sourceMappingURL=styles.css.map */
