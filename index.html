@@ -25,19 +25,22 @@
 <body>
 <div class="ig-container">
       <!-- Header -->
-      <header>
+      <header class="ig-section">
             <div class="ig-wrapper">
-                  <section id="ig-social-bar">
-                        <p><sub>Contact </sub><a href="tel:180099911"> 1800.999.1111</a></p>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                        <a href="#"><i class="fa fa-google-plus-official"></i></a>
-                        <a href="#"><i class="fa fa-envelope"></i></a>
-                  </section>
+                  <div class="ig-header-right">
+                        <div id="ig-social-bar" class="ig-social">
+                              <a href="#"><i class="fa fa-twitter"></i></a>
+                              <a href="#"><i class="fa fa-facebook"></i></a>
+                              <a href="#"><i class="fa fa-google-plus-official"></i></a>
+                              <a href="#"><i class="fa fa-envelope"></i></a>
+                        </div>
+                        <div
+                                class="ig-social ig-header-contact"><sub>Mobile Number </sub><a href="tel:180099911">
+                              1.800.123.4567</a></div>
+                  </div>
                   <h1 class="ig-logo"><a href="#">Ittefaq Group</a></h1>
-                  <a href="#" class="ig-nav-button"><i class="fa fa-bars"></i> MENU</a>
                   <nav id="ig-main-nav" class="ig-main-nav">
+                        <div id="ig-nav-toggle"><i class="fa fa-bars"></i></div>
                         <ul class="ig-nav-list">
                               <li><a href="#">Home</a></li>
                               <li><a href="#">Services</a></li>
@@ -52,26 +55,30 @@
                         </ul>
                   </nav>
             </div>
-            <div class="ig-nav-overlay"></div>
       </header>
       <!-- / Header -->
       
       <!-- Hero image -->
-      <div id="hero-image">
+      <div id="hero-image" class="ig-section">
             <div class="ig-wrapper">
+                  <h2>Banner Here</h2>
             </div>
       </div>
       <!-- / Hero image -->
       
       <!--Our Businesses -->
-      <div id="businesses">
+      <div id="businesses" class="ig-section">
             <div class="ig-wrapper">
                   <h2>Our Businesses</h2>
-                  <article class="ig-business"><a href="#"><img src="" alt=""></a><a href="">
-                        <h6></h6>
-                        <span></span>
+                  <article class="ig-business">
+                        <a href="#">
+                              <img src="" alt="">
+                              <h6></h6>
+                        </a>
+                        <span>13<sup>th</sup> Mar 2017</span>
                         <p></p>
-                        <a href=""></a></a></article>
+                        <a href="">Download</a>
+                  </article>
                   <article class="ig-business"><a href=""><img src="" alt=""></a><a href="">
                         <h6></h6>
                         <span></span>
@@ -87,7 +94,7 @@
       <!--/Our Businesses -->
       
       <!-- Testimonials -->
-      <div id="testimonials">
+      <div id="testimonials" class="ig-section">
             <div class="ig-wrapper">
                   <h2>Testimonials</h2>
                   <section id="ig-testimonials-wrapper">
@@ -119,8 +126,9 @@
       <!-- /Testimonials -->
       
       <!-- Story -->
-      <div id="story">
+      <div id="story" class="ig-section">
             <div class="ig-wrapper">
+                  <h2>Our Story</h2>
                   <article class="ig-story"><img src="" alt="">
                         <p></p>
                   </article>
@@ -135,7 +143,7 @@
       <!-- /Story -->
       
       <!-- Footer -->
-      <footer>
+      <footer class="ig-section">
             <section class="ig-wrapper">
                   <!-- Footer Social-->
                   <section class="footer-social"><label class="font-heading">Follow us</label> <a target="_blank"

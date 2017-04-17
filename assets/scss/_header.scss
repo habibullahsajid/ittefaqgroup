@@ -1,10 +1,30 @@
 header {
-    height: 95px;
     background: #000000;
     padding-top: 30px;
+    
+    .ig-header-right {
+        display: block;
+        .ig-social {
+            float: right;
+            margin-left: 15px;
+            font-size: 12px;
+            sub {
+                color: #fff;
+                font-family: 'PT Sans', sans-serif;
+            }
+            a {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 15px;
+                letter-spacing: 0.5px;
+                font-weight: normal;
+            }
+        }
+        .ig-header-contact {
+            padding-top: 5px;
+        }
+    }
     #ig-social-bar {
-        float: right;
-        display: inline-block;
+        
         p {
             font-family: 'Montserrat', sans-serif;
             color: #ffffff;
@@ -22,10 +42,10 @@ header {
             height: 13px;
             font-size: 13px;
             text-align: center;
+            margin-right: 5px;
         }
     }
     .ig-logo {
-        float: left;
         font-family: 'Montserrat', sans-serif;
         color: #ffffff;
         a {
@@ -36,6 +56,22 @@ header {
             display: inline-block;
             margin: 0 auto;
             text-indent: -9000px;
+        }
+    }
+    #ig-main-nav {
+        #ig-nav-toggle {
+            color: #FFF;
+            display: none;
+            font-size: 22px;
+            cursor: pointer;
+            line-height: 1;
+            margin-top: -1px;
+            position: absolute;
+            top: 23px;
+            right: 30px;
+            @media screen and (max-width: 1100px) {
+                display: inline-block;
+            }
         }
     }
 }

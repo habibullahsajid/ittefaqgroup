@@ -101,20 +101,29 @@ p {
   color: #777777;
   line-height: 16px;
   margin-bottom: 16px; }
-  p b {
-    font-weight: 700; }
-  p i {
-    font-style: italic; }
-  p u, p ins {
-    text-decoration: underline; }
-  p del, p s {
-    text-decoration: line-through; }
-  p sub {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 12px;
-    color: #808080;
-    display: inline;
-    font-weight: bold; }
+
+b {
+  font-weight: 700; }
+
+i {
+  font-style: italic; }
+
+u, ins {
+  text-decoration: underline; }
+
+del, s {
+  text-decoration: line-through; }
+
+sup {
+  font-size: 10px;
+  vertical-align: text-top; }
+
+sub {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 12px;
+  opacity: 0.7;
+  display: inline;
+  font-weight: bold; }
 
 tt, code, kbd, samp {
   font-family: monospace;
@@ -206,7 +215,6 @@ ol {
   width: 1130px;
   margin: 0 auto;
   display: block;
-  height: 100%;
   -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
   -moz-transition: -moz-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
   transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9); }
@@ -259,29 +267,41 @@ ol {
     margin: 0 0 0 20px;
     float: right; } }
 header {
-  height: 95px;
   background: #000000;
   padding-top: 30px; }
-  header #ig-social-bar {
-    float: right;
-    display: inline-block; }
-    header #ig-social-bar p {
-      font-family: 'Montserrat', sans-serif;
-      color: #ffffff;
-      display: inline; }
-    header #ig-social-bar a {
-      text-decoration: none;
-      color: #ffffff; }
-    header #ig-social-bar .fa {
-      border: 1px solid #fff;
-      border-radius: 100%;
-      padding: 5px;
-      width: 13px;
-      height: 13px;
-      font-size: 13px;
-      text-align: center; }
+  header .ig-header-right {
+    display: block; }
+    header .ig-header-right .ig-social {
+      float: right;
+      margin-left: 15px;
+      font-size: 12px; }
+      header .ig-header-right .ig-social sub {
+        color: #fff;
+        font-family: 'PT Sans', sans-serif; }
+      header .ig-header-right .ig-social a {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        font-weight: normal; }
+    header .ig-header-right .ig-header-contact {
+      padding-top: 5px; }
+  header #ig-social-bar p {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    display: inline; }
+  header #ig-social-bar a {
+    text-decoration: none;
+    color: #ffffff; }
+  header #ig-social-bar .fa {
+    border: 1px solid #fff;
+    border-radius: 100%;
+    padding: 5px;
+    width: 13px;
+    height: 13px;
+    font-size: 13px;
+    text-align: center;
+    margin-right: 5px; }
   header .ig-logo {
-    float: left;
     font-family: 'Montserrat', sans-serif;
     color: #ffffff; }
     header .ig-logo a {
@@ -292,5 +312,18 @@ header {
       display: inline-block;
       margin: 0 auto;
       text-indent: -9000px; }
+  header #ig-main-nav #ig-nav-toggle {
+    color: #FFF;
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+    margin-top: -1px;
+    position: absolute;
+    top: 23px;
+    right: 30px; }
+    @media screen and (max-width: 1100px) {
+      header #ig-main-nav #ig-nav-toggle {
+        display: inline-block; } }
 
 /*# sourceMappingURL=styles.css.map */

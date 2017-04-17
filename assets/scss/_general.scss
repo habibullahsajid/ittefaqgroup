@@ -79,55 +79,70 @@ p {
     color: #777777;
     line-height: 16px;
     margin-bottom: 16px;
-    strong {
-        
-    }
-    em {
-    }
-    b {
-        font-weight: 700;
-    }
-    i {
-        font-style: italic;
-    }
-    u, ins {
-        text-decoration: underline;
-    }
-    del, s {
-        text-decoration: line-through;
-    }
+}
+
+strong {
     
-    sup {
-        
-    }
-    sub {
-        font-family: 'PT Sans', sans-serif;
-        font-size: 12px;
-        color: #808080;
-        display: inline;
-        font-weight: bold;
-    }
-    small {
-        
-    }
-    abbr {
-        
-    }
-    cite {
-        
-    }
-    dfn {
-        
-    }
-    mark {
-        
-    }
-    var {
-        
-    }
-    time {
-        
-    }
+}
+
+em {
+}
+
+b {
+    font-weight: 700;
+}
+
+i {
+    font-style: italic;
+}
+
+u, ins {
+    text-decoration: underline;
+}
+
+del, s {
+    text-decoration: line-through;
+}
+
+sup {
+    font-size: 10px;
+    vertical-align: text-top;
+}
+
+sub {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    opacity: 0.7;
+    display: inline;
+    font-weight: bold;
+}
+
+small {
+    
+}
+
+abbr {
+    
+}
+
+cite {
+    
+}
+
+dfn {
+    
+}
+
+mark {
+    
+}
+
+var {
+    
+}
+
+time {
+    
 }
 
 tt, code, kbd, samp {
@@ -151,6 +166,7 @@ blockquote, q {
     -webkit-box-shadow: 2px 2px 15px #ccc;
     box-shadow: 2px 2px 15px #ccc;
 }
+
 table {
     caption {
         
@@ -242,6 +258,7 @@ input[type="tel"], input[type="search"], input[type="number"], textarea {
     transition: 50ms border-color ease-in-out;
     margin-bottom: 20px;
 }
+
 input[type="radio"] {
     
 }
