@@ -157,25 +157,29 @@ img {
 input[type="submit"], button[type="submit"],
 input[type="reset"], button,
 input[type="button"], button[type="button"] {
-  font-family: 'PT Sans', sans-serif;
-  cursor: pointer;
-  padding: 10px 12px;
+  display: inline-block;
+  color: #FFF;
+  background: #fab702;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  padding: 11px 18px 13px 18px;
+  margin: 3px 5px 3px 0px;
+  text-decoration: none;
+  border: none;
+  font-weight: 500;
+  font-size: 13px;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  font-size: 12px;
-  text-transform: uppercase;
-  background: #f9f9f9;
-  border: 2px solid #c6c6c6;
-  font-weight: 700;
-  line-height: 14px;
-  margin-bottom: 20px;
-  color: #222222; }
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset; }
   input[type="submit"]:hover, button[type="submit"]:hover,
   input[type="reset"]:hover, button:hover,
   input[type="button"]:hover, button[type="button"]:hover {
-    border: 2px solid #fab702;
-    text-decoration: none; }
+    text-decoration: none;
+    background: #faa002; }
 
 input[type="text"], input[type="password"], input[type="url"], input[type="email"],
 input[type="tel"], input[type="search"], input[type="number"], textarea {
@@ -220,33 +224,42 @@ ol {
   transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9); }
 
 .ig-button-1 {
-  padding: 10px 12px;
-  font-size: 12px;
+  display: inline-block;
+  color: #FFF;
+  background: #fab702;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  padding: 11px 18px 13px 18px;
+  margin: 3px 5px 3px 0px;
+  text-decoration: none;
+  border: none;
+  font-weight: 500;
+  font-size: 13px;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  text-transform: uppercase;
-  background: #f9f9f9;
-  border: 2px solid #c6c6c6;
-  font-weight: 700;
-  height: 24px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  color: #222222; }
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset; }
   .ig-button-1:hover {
-    border: 2px solid #fab702;
-    text-decoration: none; }
+    text-decoration: none;
+    background: #faa002; }
 
 .ig-button-2 {
-  background: #fab702;
+  background: rgba(128, 128, 128, 0.5);
   color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 13px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 12px 7px;
+  padding: 11px 18px 13px 18px;
+  margin: 3px 5px 3px 0px;
   border-radius: 2px; }
+  .ig-button-2:hover {
+    text-decoration: none;
+    background: gray; }
 
 .clear {
   clear: both; }
@@ -266,8 +279,20 @@ ol {
     display: inline-block;
     margin: 0 0 0 20px;
     float: right; } }
+#ig-bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%); }
+
 header {
-  background: #000000;
+  background: transparent;
+  position: relative;
   padding-top: 30px; }
   header .ig-header-right {
     display: block; }
@@ -301,9 +326,13 @@ header {
     font-size: 13px;
     text-align: center;
     margin-right: 5px; }
+    header #ig-social-bar .fa:hover {
+      text-decoration: none;
+      background: #fab702; }
   header .ig-logo {
     font-family: 'Montserrat', sans-serif;
-    color: #ffffff; }
+    color: #ffffff;
+    margin-bottom: 0; }
     header .ig-logo a {
       background: url("../imgs/logo.png") no-repeat;
       background-size: cover;
@@ -312,18 +341,53 @@ header {
       display: inline-block;
       margin: 0 auto;
       text-indent: -9000px; }
-  header #ig-main-nav #ig-nav-toggle {
-    color: #FFF;
-    display: none;
-    font-size: 22px;
-    cursor: pointer;
-    line-height: 1;
-    margin-top: -1px;
-    position: absolute;
-    top: 23px;
-    right: 30px; }
-    @media screen and (max-width: 1100px) {
-      header #ig-main-nav #ig-nav-toggle {
-        display: inline-block; } }
+  header #ig-main-nav {
+    float: right;
+    clear: both; }
+    header #ig-main-nav #ig-nav-toggle {
+      color: #FFF;
+      display: none;
+      font-size: 22px;
+      cursor: pointer;
+      line-height: 1;
+      margin-top: -1px;
+      position: absolute;
+      top: 23px;
+      right: 30px; }
+      @media screen and (max-width: 1100px) {
+        header #ig-main-nav #ig-nav-toggle {
+          display: inline-block; } }
+    header #ig-main-nav .ig-nav-list {
+      list-style: none;
+      display: inline-block;
+      padding: 0;
+      margin: 0; }
+      header #ig-main-nav .ig-nav-list li {
+        display: inline-block;
+        margin-left: 10px;
+        padding: 0; }
+        header #ig-main-nav .ig-nav-list li a {
+          color: #fff;
+          padding: 5px; }
+          header #ig-main-nav .ig-nav-list li a:hover {
+            text-decoration: none;
+            background: #fab702;
+            border-radius: 2px; }
+      header #ig-main-nav .ig-nav-list .current-menu-item a {
+        color: #fff;
+        background: #fab702;
+        border-radius: 2px; }
+  header #hero-image {
+    margin: auto;
+    text-align: center;
+    padding-top: 200px; }
+    header #hero-image h1 {
+      display: block;
+      color: #fff; }
+    header #hero-image a {
+      background: #00aeef; }
+      header #hero-image a:hover {
+        background: #00aeef;
+        outline: 0; }
 
 /*# sourceMappingURL=styles.css.map */

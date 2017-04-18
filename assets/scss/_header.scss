@@ -1,5 +1,18 @@
+#ig-bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
 header {
-    background: #000000;
+    background: transparent;
+    position: relative;
     padding-top: 30px;
     
     .ig-header-right {
@@ -43,11 +56,16 @@ header {
             font-size: 13px;
             text-align: center;
             margin-right: 5px;
+            &:hover {
+                text-decoration: none;
+                background: #fab702;
+            }
         }
     }
     .ig-logo {
         font-family: 'Montserrat', sans-serif;
         color: #ffffff;
+        margin-bottom: 0;
         a {
             background: url("../imgs/logo.png") no-repeat;
             background-size: cover;
@@ -59,6 +77,8 @@ header {
         }
     }
     #ig-main-nav {
+        float: right;
+        clear: both;
         #ig-nav-toggle {
             color: #FFF;
             display: none;
@@ -71,6 +91,51 @@ header {
             right: 30px;
             @media screen and (max-width: 1100px) {
                 display: inline-block;
+            }
+        }
+        
+        .ig-nav-list {
+            list-style: none;
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            li {
+                display: inline-block;
+                margin-left: 10px;
+                padding: 0;
+                a {
+                    color: #fff;
+                    padding: 5px;
+                    &:hover {
+                        text-decoration: none;
+                        background: #fab702;
+                        border-radius: 2px;
+                    }
+                }
+            }
+            .current-menu-item {
+                a {
+                    color: #fff;
+                    background: #fab702;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+    
+    #hero-image {
+        margin: auto;
+        text-align: center;
+        padding-top: 200px;
+        h1 {
+            display: block;
+            color: #fff;
+        }
+        a {
+            background: #00aeef;
+            &:hover {
+                background: #00aeef;
+                outline: 0;
             }
         }
     }
