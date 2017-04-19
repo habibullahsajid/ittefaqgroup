@@ -22,8 +22,10 @@ $(document).ready(function () {
     $('#businesses .ig-businesses').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        rows: 1,
+        slidesPerRow: 3,
         arrows: true,
         infinite : true,
         prevArrow: '<button type="button" class="slick-prev">&lt;</button>',

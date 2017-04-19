@@ -406,9 +406,11 @@ header {
 #businesses .slick-next {
   position: absolute;
   top: 0px;
-  left: 50px; }
+  left: 65px; }
+#businesses .slick-prev {
+  margin-left: 15px; }
 #businesses .ig-business {
-  padding: 16px 33px 0 0;
+  padding: 16px 16px;
   display: inline-block;
   float: left;
   border-radius: 3px; }
