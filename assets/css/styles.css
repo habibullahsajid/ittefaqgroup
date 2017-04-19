@@ -45,7 +45,7 @@ h2 {
   font-weight: 700;
   text-transform: capitalize;
   margin-bottom: 50px;
-  display: inline-block; }
+  position: relative; }
   h2::after {
     content: '\A';
     height: 2px;
@@ -53,6 +53,8 @@ h2 {
     margin: 0 auto;
     width: 93px;
     display: block;
+    position: absolute;
+    left: 0;
     border-bottom: 2px solid #444444; }
 
 h3 {
@@ -82,7 +84,7 @@ h6 {
 a {
   font-family: 'PT Sans', sans-serif;
   font-size: 15px;
-  color: #fab702;
+  color: #a51919;
   font-weight: 700;
   text-decoration: none;
   /*&:active {
@@ -139,8 +141,8 @@ blockquote, q {
   font-family: Georgia, serif;
   color: #666;
   text-align: justify;
-  border-left: 10px solid #fab702;
-  border-right: 2px solid #fab702;
+  border-left: 10px solid #a51919;
+  border-right: 2px solid #a51919;
   -moz-box-shadow: 2px 2px 15px #ccc;
   -webkit-box-shadow: 2px 2px 15px #ccc;
   box-shadow: 2px 2px 15px #ccc; }
@@ -159,7 +161,7 @@ input[type="reset"], button,
 input[type="button"], button[type="button"] {
   display: inline-block;
   color: #FFF;
-  background: #fab702;
+  background: #a51919;
   letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 1;
@@ -179,7 +181,7 @@ input[type="button"], button[type="button"] {
   input[type="reset"]:hover, button:hover,
   input[type="button"]:hover, button[type="button"]:hover {
     text-decoration: none;
-    background: #faa002; }
+    background: #b91919; }
 
 input[type="text"], input[type="password"], input[type="url"], input[type="email"],
 input[type="tel"], input[type="search"], input[type="number"], textarea {
@@ -223,16 +225,21 @@ ol {
   -moz-transition: -moz-transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
   transition: transform 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9); }
 
+.ig-section h2 {
+  padding-top: 30px; }
+.ig-section:nth-child(2n) {
+  background: #f4f4f4; }
+
 .ig-button-1 {
   display: inline-block;
   color: #FFF;
-  background: #fab702;
+  background: #a51919;
   letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 1;
   text-align: center;
   padding: 11px 18px 13px 18px;
-  margin: 3px 5px 3px 0px;
+  margin: 3px 5px 3px 0;
   text-decoration: none;
   border: none;
   font-weight: 500;
@@ -244,7 +251,7 @@ ol {
   box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset; }
   .ig-button-1:hover {
     text-decoration: none;
-    background: #faa002; }
+    background: #b91919; }
 
 .ig-button-2 {
   background: rgba(128, 128, 128, 0.5);
@@ -255,7 +262,7 @@ ol {
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 11px 18px 13px 18px;
-  margin: 3px 5px 3px 0px;
+  margin: 3px 5px 3px 0;
   border-radius: 2px; }
   .ig-button-2:hover {
     text-decoration: none;
@@ -289,10 +296,15 @@ ol {
   width: auto;
   height: auto;
   transform: translate(-50%, -50%); }
+  @media screen and (min-width: 1366px) {
+    #ig-bg-video {
+      transform: translate(-50%, -58.5%); } }
+  @media screen and (min-width: 1440px) {
+    #ig-bg-video {
+      transform: translate(-50%, -64%); } }
 
 header {
   background: transparent;
-  position: relative;
   padding-top: 30px; }
   header .ig-header-right {
     display: block; }
@@ -307,6 +319,7 @@ header {
         font-family: 'Montserrat', sans-serif;
         font-size: 15px;
         letter-spacing: 0.5px;
+        color: #ffffff;
         font-weight: normal; }
     header .ig-header-right .ig-header-contact {
       padding-top: 5px; }
@@ -328,7 +341,7 @@ header {
     margin-right: 5px; }
     header #ig-social-bar .fa:hover {
       text-decoration: none;
-      background: #fab702; }
+      background: #a51919; }
   header .ig-logo {
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
@@ -371,11 +384,11 @@ header {
           padding: 5px; }
           header #ig-main-nav .ig-nav-list li a:hover {
             text-decoration: none;
-            background: #fab702;
+            background: #a51919;
             border-radius: 2px; }
       header #ig-main-nav .ig-nav-list .current-menu-item a {
         color: #fff;
-        background: #fab702;
+        background: #a51919;
         border-radius: 2px; }
   header #hero-image {
     margin: auto;
@@ -389,5 +402,34 @@ header {
       header #hero-image a:hover {
         background: #00aeef;
         outline: 0; }
+
+#businesses .slick-next {
+  position: absolute;
+  top: 0px;
+  left: 50px; }
+#businesses .ig-business {
+  padding: 16px 33px 0 0;
+  display: inline-block;
+  float: left;
+  border-radius: 3px; }
+  #businesses .ig-business:last-child {
+    margin-right: 0; }
+  #businesses .ig-business img {
+    margin-bottom: 20px; }
+  #businesses .ig-business h4 {
+    position: relative; }
+  #businesses .ig-business span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 10px;
+    margin-bottom: 20px;
+    display: block; }
+  #businesses .ig-business p {
+    text-align: justify; }
+  #businesses .ig-business footer .ig-read {
+    float: left; }
+  #businesses .ig-business footer .ig-download {
+    float: right; }
 
 /*# sourceMappingURL=styles.css.map */

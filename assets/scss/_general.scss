@@ -14,7 +14,7 @@ h2 {
     font-weight: 700;
     text-transform: capitalize;
     margin-bottom: 50px;
-    display: inline-block;
+    position: relative;
     &::after {
         content: '\A';
         height: 2px;
@@ -22,6 +22,8 @@ h2 {
         margin: 0 auto;
         width: 93px;
         display: block;
+        position: absolute;
+        left: 0;
         border-bottom: 2px solid #444444;
     }
 }
@@ -58,7 +60,7 @@ h6 {
 a {
     font-family: 'PT Sans', sans-serif;
     font-size: 15px;
-    color: #fab702;
+    color: #a51919;
     font-weight: 700;
     text-decoration: none;
     &:hover {
@@ -160,8 +162,8 @@ blockquote, q {
     font-family: Georgia, serif;
     color: #666;
     text-align: justify;
-    border-left: 10px solid #fab702;
-    border-right: 2px solid #fab702;
+    border-left: 10px solid #a51919;
+    border-right: 2px solid #a51919;
     -moz-box-shadow: 2px 2px 15px #ccc;
     -webkit-box-shadow: 2px 2px 15px #ccc;
     box-shadow: 2px 2px 15px #ccc;
@@ -220,7 +222,7 @@ input[type = "reset"], button,
 input[type = "button"], button[type = "button"] {
     display: inline-block;
     color: #FFF;
-    background: #fab702;
+    background: #a51919;
     letter-spacing: 1px;
     text-transform: uppercase;
     line-height: 1;
@@ -238,7 +240,7 @@ input[type = "button"], button[type = "button"] {
     box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1) inset;
     &:hover {
         text-decoration: none;
-        background: #faa002;
+        background: #b91919;
     }
 }
 

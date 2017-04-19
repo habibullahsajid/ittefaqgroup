@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    /* Page Scroll */
     $('.ig-container').onepage_scroll({
         sectionContainer: ".ig-section",     // sectionContainer accepts any kind of selector in case you don't want
         // to use section
@@ -16,4 +17,17 @@ $(document).ready(function () {
         // the browser's width is less than 600, the fallback will kick in.
         direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
     });
+
+    /* Business Sliders */
+    $('#businesses .ig-businesses').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
+        arrows: true,
+        infinite : true,
+        prevArrow: '<button type="button" class="slick-prev">&lt;</button>',
+        nextArrow: '<button type="button" class="slick-next">&gt;</button>'
+    });
+
 });

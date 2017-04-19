@@ -8,13 +8,17 @@
       
       <title>Ittefaq Group</title>
       <link rel="shortcut icon" href="assets/imgs/icons/favicon.png">
+      <!-- CSS and Fonts-->
       <link href="https://fonts.googleapis.com/css?family=Montserrat|PT+Sans" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
       <link rel="stylesheet" type="text/css" href="assets/css/onepage-scroll.css">
       <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="assets/css/slick.css">
       
+      <!-- JS and plugins-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="assets/js/jquery.onepage-scroll.min.js"></script>
+      <script src="assets/js/slick.min.js"></script>
       <script src="assets/js/actions.js"></script>
       
       <!--[if lt IE 9]>
@@ -25,16 +29,16 @@
 <body>
 <div class="ig-container">
       <!-- Header -->
-      <!--bg video-->
-      <video id="ig-bg-video" autoplay muted loop>
-            <source src="assets/videos/construction-sample.mp4" type="video/mp4">
-            <source src="assets/videos/construction-sample.ogv" type="video/ogg">
-            <source src="assets/videos/construction-sample.webm" type="video/webm">
-            Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
-      </video>
       <!--/bg video-->
       <header class="ig-section">
             <div class="ig-wrapper">
+                  <!--bg video-->
+                  <video id="ig-bg-video" autoplay muted loop>
+                        <source src="assets/videos/construction-sample.mp4" type="video/mp4">
+                        <source src="assets/videos/construction-sample.ogv" type="video/ogg">
+                        <source src="assets/videos/construction-sample.webm" type="video/webm">
+                        Your browser doesn't support HTML5 video. Here's a <a href="#">link</a> to download the video.
+                  </video>
                   <div class="ig-header-right">
                         <div id="ig-social-bar" class="ig-social">
                               <a href="#"><i class="fa fa-twitter"></i></a>
@@ -63,7 +67,7 @@
                         </ul>
                   </nav>
             </div>
-      
+            
             <!-- Hero image -->
             <div id="hero-image">
                   <div class="ig-wrapper">
@@ -79,25 +83,64 @@
       <div id="businesses" class="ig-section">
             <div class="ig-wrapper">
                   <h2>Our Businesses</h2>
-                  <article class="ig-business">
-                        <a href="#">
-                              <img src="" alt="">
-                              <h6></h6>
-                        </a>
-                        <span>13<sup>th</sup> Mar 2017</span>
-                        <p></p>
-                        <a href="">Download</a>
-                  </article>
-                  <article class="ig-business"><a href=""><img src="" alt=""></a><a href="">
-                        <h6></h6>
-                        <span></span>
-                        <p></p>
-                        <a href=""></a></a></article>
-                  <article class="ig-business"><a href=""><img src="" alt=""></a><a href="">
-                        <h6></h6>
-                        <span></span>
-                        <p></p>
-                        <a href=""></a></a></article>
+                  <div class="ig-businesses" data-slick='{"slidesToShow": 3, "slidesToScroll": 3}'>
+                        <article class="ig-business">
+                              <a href="#">
+                                    <img src="assets/imgs/teamwork-606818_1280-600x300.jpg" alt="">
+                              </a>
+                              <h4>PEB Buildings <span>13<sup>th</sup> Mar 2017</span></h4>
+                              <p>Constructor explains how you can enjoy high end flooring trends like textured wood and
+                                    realistic stones with new laminate flooring.</p>
+                              <footer><a href="#" class="ig-read">Read More</a>
+                                    <a href="#" class="ig-download">Download</a>
+                              </footer>
+                        </article>
+                        <article class="ig-business">
+                              <a href="#">
+                                    <img src="assets/imgs/teamwork-606818_1280-600x300.jpg" alt="">
+                              </a>
+                              <h4>PEB Buildings 2 <span>13<sup>th</sup> Mar 2017</span></h4>
+                              <p>Constructor explains how you can enjoy high end flooring trends like textured wood and
+                                    realistic stones with new laminate flooring.</p>
+                              <footer>
+                                    <a href="#" class="ig-read">Read More</a>
+                                    <a href="#" class="ig-download">Download</a>
+                              </footer>
+                        </article>
+                        <article class="ig-business">
+                              <a href="#">
+                                    <img src="assets/imgs/teamwork-606818_1280-600x300.jpg" alt="">
+                              </a>
+                              <h4>Roof and Wall Panels<span>13<sup>th</sup> Mar 2017</span></h4>
+                              <p>Constructor explains how you can enjoy high end flooring trends like textured wood and
+                                    realistic stones with new laminate flooring.</p>
+                              <footer><a href="#" class="ig-read">Read More</a> <a href="#"
+                                                                                   class="ig-download">Download</a>
+                              </footer>
+                        </article>
+                        <article class="ig-business">
+                              <a href="#">
+                                    <img src="assets/imgs/teamwork-606818_1280-600x300.jpg" alt="">
+                              </a>
+                              <h4>Roof and Wall Panels<span>13<sup>th</sup> Mar 2017</span></h4>
+                              <p>Constructor explains how you can enjoy high end flooring trends like textured wood and
+                                    realistic stones with new laminate flooring.</p>
+                              <footer><a href="#" class="ig-read">Read More</a> <a href="#"
+                                                                                   class="ig-download">Download</a>
+                              </footer>
+                        </article>
+                        <article class="ig-business">
+                              <a href="#">
+                                    <img src="assets/imgs/teamwork-606818_1280-600x300.jpg" alt="">
+                              </a>
+                              <h4>Steel Joints and Decks<span>13<sup>th</sup> Mar 2017</span></h4>
+                              <p>Constructor explains how you can enjoy high end flooring trends like textured wood and
+                                    realistic stones with new laminate flooring.</p>
+                              <footer><a href="#" class="ig-read">Read More</a> <a href="#"
+                                                                                   class="ig-download">Download</a>
+                              </footer>
+                        </article>
+                  </div>
             </div>
       </div>
       <!--/Our Businesses -->
