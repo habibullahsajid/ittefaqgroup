@@ -1,0 +1,271 @@
+/*------------------------------
+	4.4 Footer
+------------------------------*/
+.site-footer {
+    padding: 0px 0 0px;
+    background: #111111;
+    color: #999999;
+    font-size: 13px;
+    a, .widget a {
+        color: #dddddd;
+        &:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+    }
+    .widget {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+    table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
+        border-color: rgba( 255,255,255,0.3);
+    }
+    textarea, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
+        border-color: rgba( 255,255,255,0.3);
+    }
+}
+
+.footer-1-columns .footer-column {
+    width: 100%;
+}
+
+.footer-2-columns {
+    .footer-column {
+        width: 100%;
+    }
+    @include for(medium-screens) {
+        .footer-column {
+            width: percentage( ( ( $width - $gutter ) / 2 ) / $width );
+            float: left;
+            margin-right: percentage($gutter / $width);
+        }
+        .footer-2 {
+            margin-right: 0;
+        }
+    }
+}
+
+.footer-3-columns {
+    .footer-column {
+        width: 100%;
+    }
+    @include for(medium-screens) {
+        .footer-column {
+            width: percentage( ( ( $width - $gutter ) / 2 ) / $width );
+            float: left;
+            margin-right: percentage($gutter / $width);
+        }
+        .footer-2 {
+            margin-right: 0;
+        }
+    }
+    @include for(large-screens) {
+        .footer-column {
+            width: percentage( ( ( $width - $gutter*2 ) / 3 ) / $width );
+            float: left;
+            margin-right: percentage($gutter / $width);
+        }
+        .footer-3 {
+            margin-right: 0;
+        }
+    }
+}
+
+.footer-4-columns {
+    .footer-column {
+        width: 100%;
+    }
+    @include for(medium-screens) {
+        .footer-column {
+            width: percentage( ( ( $width - $gutter ) / 2 ) / $width );
+            float: left;
+            margin-right: percentage($gutter / $width);
+        }
+        .footer-2, .footer-4 {
+            margin-right: 0;
+        }
+    }
+    @include for(large-screens) {
+        .footer-column {
+            width: percentage( ( ( $width - $gutter*3 ) / 4 ) / $width );
+            float: left;
+            margin-right: percentage($gutter / $width);
+        }
+        .footer-4 {
+            margin-right: 0;
+        }
+    }
+}
+
+.site-footer .footer-columns {
+    padding: 40px 0px;
+    .footer-column .widget {
+        padding-bottom: 0;
+        margin-bottom: 30px;
+        border: none;
+        @include for(medium-screens) {
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+        .widget-title {
+            color: #eeeeee;
+            font-size: 15px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: -0.1px;
+            font-weight: 500;
+        }
+    }
+    .widget_nav_menu {
+        ul ul, ul ul ul {
+            padding: 0px;
+        }
+        ul li{
+            padding: 0;
+            
+            a {
+                display: block;
+                padding: 5px 10px 9px 17px;
+                position: relative;
+                border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
+                &:before {
+                    content: "\f105";
+                    font-family: FontAwesome;
+                    font-size: 10px;
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 8px;
+                    
+                }
+            }
+        }
+    }
+    .widget_nav_menu #menu-footer-widget-menu {
+    
+        padding: 0;
+        margin-bottom: 10px;
+        list-style: none;
+        li {
+            float: left;
+            margin-bottom: 0;
+            width: 50%;
+            padding: 10px 0px;
+            margin-left: 0px;
+            a {
+                display: unset;
+                padding: 0;
+                border: none;
+                &:before {
+                    content: none;
+                }
+            }
+        }
+        
+    }
+    
+    .widget_wpc_posts ul li {
+        background: rgba(255, 255, 255, 0.03);
+    }
+    .contact-info-item .contact-text {
+        i {
+            font-size: 16px;
+        }
+        i.fa-envelope {
+            font-size: 12px;
+            position: relative;
+            top: -3px;
+        }
+        i.fa-fax {
+            font-size: 14px;
+            position: relative;
+            top: -3px;
+        }
+    }
+    
+    .contact-info-item .contact-value {
+        display: inline-flex;
+        margin-bottom: 20px;
+        margin-left: 35px;
+    }
+    
+    .contact-info-box img {
+        margin-bottom: 30px;
+    }
+    ul.hours {
+        list-style: none;
+        padding: 0;
+        li {
+            margin: 0 10px 0 0;
+            border-top: 1px dotted rgba(255, 255, 255, 0.1);
+        }
+        li:first-child {
+            border-top: none;
+            //border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
+        }
+        span {
+            float: right;
+            font-weight: bold;
+        }
+    }
+}
+
+.site-info-wrapper {
+    clear: both;
+    background: #222222;
+    border-top: 1px solid #333333;
+    padding: 20px 0 30px;
+    font-size: 12px;
+    .site-info {
+        .copy_text {
+            float: none;
+            text-align: center;
+            font-size: 13px;
+            margin-bottom: 30px;
+            @include for(medium-screens) {
+                float: left;
+                margin-bottom: 0px;
+                text-align: left;
+            }
+            a {
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .footer-menu {
+            float: none;
+            text-align: center;
+            @include for(medium-screens) {
+                float: right;
+                text-align: left;
+            }
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                li {
+                    padding: 0;
+                    margin: 0;
+                    display: inline-block;
+                    line-height: 1;
+                    a {
+                        float: left;
+                        margin-left: 15px;
+                        text-decoration: none;
+                        font-size: 12px;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+

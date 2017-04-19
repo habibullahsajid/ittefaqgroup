@@ -21,7 +21,7 @@ $(document).ready(function () {
     /* Business Sliders */
     $('#businesses .ig-businesses').slick({
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         autoplay: true,
         autoplaySpeed: 3000,
         rows: 1,
