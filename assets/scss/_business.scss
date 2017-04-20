@@ -1,14 +1,26 @@
 #businesses {
     
-    .slick-next {
-        position: absolute;
-        top: 0px;
-        left: 65px;
+    .ig-btn-light {
+        border: 1px solid #DDD;
+        color: #888;
+        background: #FFF;
+        &:hover {
+            color: #222 !important;
+            border-color: #bbb;
+        }
     }
-    .slick-prev{
-        margin-left: 15px;
+    
+    .slick-next {
+        right: 10px;
+    }
+    .slick-prev {
+        right: 60px;
     }
     .slick-arrow {
+        position: absolute;
+        top: -75px;
+        font-size: 25px;
+        padding: 5px 12px;
     }
     .ig-business {
         padding: 16px 16px;
@@ -39,9 +51,17 @@
         footer {
             .ig-read {
                 float: left;
+                padding: 10px;
+                &:hover {
+                    text-decoration: none;
+                }
             }
             .ig-download {
+                padding: 10px;
                 float: right;
+                &:hover {
+                    text-decoration: none;
+                }
             }
         }
     }

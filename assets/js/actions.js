@@ -28,8 +28,27 @@ $(document).ready(function () {
         slidesPerRow: 3,
         arrows: true,
         infinite : true,
-        prevArrow: '<button type="button" class="slick-prev">&lt;</button>',
-        nextArrow: '<button type="button" class="slick-next">&gt;</button>'
+        prevArrow: '<button type="button" class="ig-btn-light slick-prev">&lt;</button>',
+        nextArrow: '<button type="button" class="ig-btn-light slick-next">&gt;</button>'
     });
 
+    /* Testimonial slider */
+    $('.ig-testimonials').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false,
+        infinite : true
+    });
+
+    /* Clients */
+/*    $('.ig-clients').slick({
+        // slidesToShow: 6,
+        // slidesToScroll: 1,
+        // autoplay: false,
+        // autoplaySpeed: 1000,
+        // arrows: false,
+        // infinite : true
+    });*/
 });

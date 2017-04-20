@@ -186,9 +186,9 @@
     }
     
     .contact-info-item .contact-value {
-        display: inline-flex;
+        /*display: inline-flex;
         margin-bottom: 20px;
-        margin-left: 35px;
+        margin-left: 35px;*/
     }
     
     .contact-info-box img {
@@ -216,7 +216,7 @@
     clear: both;
     background: #222222;
     border-top: 1px solid #333333;
-    padding: 20px 0 30px;
+    padding: 15px 0 10px;
     font-size: 12px;
     .site-info {
         .copy_text {
@@ -224,6 +224,9 @@
             text-align: center;
             font-size: 13px;
             margin-bottom: 30px;
+            a{
+                font-size: 13px;
+            }
             @include for(medium-screens) {
                 float: left;
                 margin-bottom: 0px;
