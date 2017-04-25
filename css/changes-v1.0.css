@@ -1,0 +1,43 @@
+.thumbnail {
+      position: relative;
+}
+
+.image {
+      display: block;
+      width: 100%;
+      height: auto;
+}
+
+.business-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0, 0.7);
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      transition: .5s ease;
+      text-align: center;
+      color: #fff;
+}
+
+.thumbnail:hover .business-overlay {
+      height: 100%;
+      padding: 20% 0 0;
+}
+
+.business-image{
+      width: 358px;
+      height: 240px;
+}
+.ig-news{
+      background: #CB4335;
+}
+#toTop{
+      color: #E74C3C;
+      border: 2px solid #E74C3C;
+}
+#toTop:hover{
+      background-color: #E74C3C;
+}

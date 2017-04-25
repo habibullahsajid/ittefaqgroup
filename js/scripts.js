@@ -56,7 +56,6 @@ jQuery(function ($) {
 
 
 
-
     // ------------------------------------------------------------------
     // jQuery for back to Top
     // ------------------------------------------------------------------
@@ -103,64 +102,30 @@ jQuery(function ($) {
         })
     }());
 
+    // Instantiate the Bootstrap carousel
+    $('.multi-item-carousel').carousel({
+        interval: false
+    });
 
-    // -------------------------------------------------------------
-    // Google Map
-    // -------------------------------------------------------------
-
-    (function () {
-
-        if ($('#googleMap').length > 0) {
-
-            //set your google maps parameters
-            var $latitude = 48.869319, //If you unable to find latitude and longitude of your address. Please visit http://www.latlong.net/convert-address-to-lat-long.html you can easily generate.
-                $longitude = 2.354261,
-                $map_zoom = 16; /* ZOOM SETTING */
-
-            //google map custom marker icon
-            var $marker_url = 'img/google-map-marker.png';
-
-            //we define here the style of the map
-            var style = [{
-                "stylers": [{
-                    "hue": "#000"
-                }, {
-                    "saturation": -100
-                }, {
-                    "gamma": 2.15
-                }, {
-                    "lightness": 12
-                }]
-            }];
-
-            //set google map options
-            var map_options = {
-                center: new google.maps.LatLng($latitude, $longitude),
-                zoom: $map_zoom,
-                panControl: false,
-                zoomControl: false,
-                mapTypeControl: false,
-                streetViewControl: false,
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                scrollwheel: false,
-                styles: style,
-            }
-            //initialize the map
-            var map = new google.maps.Map(document.getElementById('googleMap'), map_options);
-            //add a custom marker to the map
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng($latitude, $longitude),
-                map: map,
-                visible: true,
-                icon: $marker_url
-            });
+// for every slide in carousel, copy the next slide's item in the slide.
+// Do the same for the next, next item.
+    $('.multi-item-carousel .item').each(function(){
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
         }
-    }());
+        next.children(':first-child').clone().appendTo($(this));
 
+        if (next.next().length>0) {
+            next.next().children(':first-child').clone().appendTo($(this));
+        } else {
+            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+        }
+    });
 
 }); // JQuery end
 
 
 $(document).on('click', '.m-menu .dropdown-menu', function(e) {
   e.stopPropagation()
-})
+});
