@@ -122,6 +122,20 @@ jQuery(function ($) {
             $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
         }
     });
+    //----------------------------------
+    //---- Slick Slider-----------------
+    //----------------------------------
+
+    $('.client-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        prevArrow: '',
+        nextArrow: '',
+        pauseOnHover: true,
+
+    });
 
 }); // JQuery end
 
