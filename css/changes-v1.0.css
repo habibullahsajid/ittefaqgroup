@@ -13,7 +13,7 @@
       top: 0;
       left: 0;
       right: 0;
-      background: rgba(0,0,0, 0.7);
+      background: rgba(0, 0, 0, 0.7);
       overflow: hidden;
       width: 100%;
       height: 0;
@@ -27,25 +27,99 @@
       padding: 20% 0 0;
 }
 
-.business-image{
+.business-image {
       width: 358px;
       height: 240px;
 }
-.ig-news{
+
+.ig-news {
       background: #CB4335;
 }
-#toTop{
+
+#toTop {
       color: #E74C3C;
       border: 2px solid #E74C3C;
 }
-#toTop:hover{
+
+#toTop:hover {
       background-color: #E74C3C;
 }
 
-video{
+video {
       width: 100%;
 }
 
 .client-logos img {
       
+}
+
+#ig-video-bg{
+      position: relative;
+}
+
+@media screen and (min-width: 768px) {
+      .video-caption {
+            right: 20%;
+            left: 20%;
+            padding-bottom: 30px;
+      }
+}
+
+.video-caption {
+      position: absolute;
+      right: 15%;
+      top: 48%;
+      left: 15%;
+      z-index: 10;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.news{
+      margin-top: 15px;
+}
+
+.hideoverflow{
+      overflow: hidden;
+}
+
+.video-caption h1{
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+}
+
+.btn-red {
+      color            : #fff;
+      background-color : #CB4335;
+      border-color     : #CB4335;
+}
+
+.facebook-post {
+      border: 1px solid #c3c3c3;
+      padding: 30px;
+      background: #3B5998;
+      color: #fff;
+}
+.facebook-post h3{
+      color: #fff;
+      text-transform:uppercase;
+      letter-spacing: 3px;
+}
+.facebook-post .fa {
+      float: right;
+      font-size: 25px;
+      margin-right: 20px;
+      background: #3b1098;
+      padding: 7px 12px;
+}
+
+.btn-red:focus,
+.btn-red:hover {
+      color            : #ffffff;
+      border-color     : #ffffff;
+      background-color : transparent !important;
 }
