@@ -129,3 +129,31 @@ video {
       width: 88%;
       padding-left: 2%;
 }
+@media screen and (min-width:1200px){
+      .navbar-fixed-top.sticky-nav .container {
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+      }
+}
+.journey-career .journey header  {
+      font-family: 'Courgette', cursive;
+      font-size: 40px;
+      color: #fff;
+      padding: 7% 4%;
+      border-radius: 100%;
+      background: #cd3433; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(#CB4335, #cd3433); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#CB4335, #cd3433); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#CB4335, #cd3433); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#CB4335, #cd3433); /* Standard syntax */
+}
+.journey-career .journey div p{
+      font-size: 20px;
+      color: #000000;
+      padding: 30px 0 0 30px;
+}
+.journey-career .journey article {
+      padding: 15px;
+      border: 1px solid #CB4335;
+}
