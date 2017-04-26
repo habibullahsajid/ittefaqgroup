@@ -123,3 +123,9 @@ video {
       border-color     : #ffffff;
       background-color : transparent !important;
 }
+
+.fb-content {
+      display: inline-block;
+      width: 88%;
+      padding-left: 2%;
+}
