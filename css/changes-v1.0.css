@@ -157,3 +157,10 @@ video {
       padding: 15px;
       border: 1px solid #CB4335;
 }
+.fix-height-305{
+      height: 305px;
+}
+.padding-0{
+      padding-right:0;
+      padding-left:0;
+}
