@@ -56,7 +56,10 @@ jQuery(function ($) {
     // ------------------------------------------------------------------
     (function () {
 
+
+
         $('body').append('<div id="toTop"><i class="fa fa-angle-up"></i></div>');
+        gir
 
         $(window).scroll(function () {
             if ($(this).scrollTop() != 0) {

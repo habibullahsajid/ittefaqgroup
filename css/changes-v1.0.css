@@ -53,7 +53,7 @@ video {
       
 }
 
-#ig-video-bg{
+#ig-video-bg {
       position: relative;
 }
 
@@ -78,24 +78,24 @@ video {
       text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
 
-.news{
+.news {
       margin-top: 15px;
 }
 
-.hideoverflow{
+.hideoverflow {
       overflow: hidden;
 }
 
-.video-caption h1{
+.video-caption h1 {
       color: #ffffff;
       text-transform: uppercase;
       margin-bottom: 30px;
 }
 
 .btn-red {
-      color            : #fff;
-      background-color : #CB4335;
-      border-color     : #CB4335;
+      color: #fff;
+      background-color: #CB4335;
+      border-color: #CB4335;
 }
 
 .facebook-post {
@@ -104,11 +104,13 @@ video {
       background: #3B5998;
       color: #fff;
 }
-.facebook-post h3{
+
+.facebook-post h3 {
       color: #fff;
-      text-transform:uppercase;
+      text-transform: uppercase;
       letter-spacing: 3px;
 }
+
 .facebook-post .fa {
       float: right;
       font-size: 25px;
@@ -119,9 +121,9 @@ video {
 
 .btn-red:focus,
 .btn-red:hover {
-      color            : #ffffff;
-      border-color     : #ffffff;
-      background-color : transparent !important;
+      color: #ffffff;
+      border-color: #ffffff;
+      background-color: transparent !important;
 }
 
 .fb-content {
@@ -129,14 +131,16 @@ video {
       width: 88%;
       padding-left: 2%;
 }
-@media screen and (min-width:1200px){
+
+@media screen and (min-width: 1200px) {
       .navbar-fixed-top.sticky-nav .container {
             width: 100%;
             padding-top: 10px;
             padding-bottom: 10px;
       }
 }
-.journey-career .journey header  {
+
+.journey-career .journey header {
       font-family: 'Courgette', cursive;
       font-size: 50px;
       color: #fff;
@@ -148,20 +152,94 @@ video {
       background: -moz-linear-gradient(#CB4335, #cd3433); /* For Firefox 3.6 to 15 */
       background: linear-gradient(#CB4335, #cd3433); /* Standard syntax */
 }
-.journey-career .journey div p{
+
+.journey-career .journey div p {
       font-size: 20px;
       color: #000000;
       padding: 45px 0 0 30px;
 }
+
 .journey-career .journey article {
       padding: 15px;
       border: 1px solid #CB4335;
-      margin:0 15px;
+      margin: 0 15px;
 }
-.fix-height-305{
+
+.fix-height-305 {
       height: 305px;
 }
-.padding-0{
-      padding-right:0;
-      padding-left:0;
+
+.padding-0 {
+      padding-right: 0;
+      padding-left: 0;
+}
+
+@media (min-width: 768px) {
+      .sticky-nav.navbar-default {
+            padding: 15px 0;
+            box-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            transition: all 0.3s;
+      }
+}
+
+.category-icon img {
+      margin: 0 auto;
+}
+article.category-item {
+      margin-bottom: 20px;
+}
+.navbar-footer li {
+      width: 33.333%;
+}
+
+.social-icons{
+      position: fixed;
+      right: 0;
+      top: 40%;
+      z-index: 100;
+      display: block !important;
+}
+.social-icons ul {
+      overflow: auto;
+}
+
+.social-icons ul li {
+      list-style-type: none;
+      margin-bottom: 10px;
+}
+
+.social-icons ul li a i {
+      background: #205D7A;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      font-size: 25px;
+      text-align: center;
+      margin-right: 10px;
+      padding-top: 15%;
+}
+
+.social-icons .fa-facebook {
+      background:#3b5998
+}
+
+.social-icons .fa-linkedin {
+      background:#007bb6
+}
+
+.social-icons .fa-twitter {
+      background:#00aced
+}
+
+.social-icons .google-plus {
+      background:#dd4b39
+}
+.social-icons ul li a i {
+      transition: all 0.2s ease-in-out;
+}
+.social-icons ul li a i:hover {
+      opacity: .7;
 }
