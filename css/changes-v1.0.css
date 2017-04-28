@@ -22,6 +22,14 @@
       color: #fff;
 }
 
+.business-overlay p {
+      margin: 0 20px 10px;
+}
+
+.ig-services .caption h3 {
+      text-align: center;
+}
+
 .thumbnail:hover .business-overlay {
       height: 100%;
       padding: 20% 0 0;
@@ -186,20 +194,24 @@ video {
 .category-icon img {
       margin: 0 auto;
 }
+
 article.category-item {
       margin-bottom: 20px;
 }
+
 .navbar-footer li {
       width: 33.333%;
 }
 
-.social-icons{
-      position: fixed;
-      right: 0;
-      top: 40%;
-      z-index: 100;
+.social-icons {
+      /* position: fixed;
+       right: 0;
+       top: 40%;*/
       display: block !important;
+      margin-bottom: 20px;
+      margin-right: 38px;
 }
+
 .social-icons ul {
       overflow: auto;
 }
@@ -207,21 +219,26 @@ article.category-item {
 .social-icons ul li {
       list-style-type: none;
       margin-bottom: 10px;
+      display: inline-block;
+      float: right;
+      margin-left: 10px;
 }
 
 .social-icons ul li a i {
-      background: #205D7A;
       color: #fff;
-      width: 40px;
-      height: 40px;
-      border-radius: 20px;
-      font-size: 25px;
+      width: 25px;
+      height: 25px;
+      font-size: 20px;
       text-align: center;
-      margin-right: 10px;
-      padding-top: 15%;
+      padding: 3px;
 }
-
-.social-icons .fa-facebook {
+.social-icons li sub{
+      color: #fff;
+}
+.sticky-nav a.navbar-brand img {
+      height: 55px;
+}
+/*.social-icons .fa-facebook {
       background:#3b5998
 }
 
@@ -236,9 +253,19 @@ article.category-item {
 .social-icons .fa-google-plus {
       background:#dd4b39
 }
+*/
 .social-icons ul li a i {
       transition: all 0.2s ease-in-out;
 }
+
 .social-icons ul li a i:hover {
       opacity: .7;
+      background: #CB4335;
+}
+
+@media screen and (min-width: 768px) {
+      .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+            margin-left: 0px;
+            margin-top: 20px;
+      }
 }
