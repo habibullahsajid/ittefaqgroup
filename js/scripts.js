@@ -59,8 +59,6 @@ jQuery(function ($) {
 
 
         $('body').append('<div id="toTop"><i class="fa fa-angle-up"></i></div>');
-        gir
-
         $(window).scroll(function () {
             if ($(this).scrollTop() != 0) {
                 $('#toTop').fadeIn();
@@ -141,7 +139,7 @@ jQuery(function ($) {
         autoplaySpeed: 4000,
         prevArrow: '',
         nextArrow: '',
-        pauseOnHover: true,
+        pauseOnHover: true
     });
     //----------------------------------
     //---- social feed-----------------
