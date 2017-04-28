@@ -74,6 +74,25 @@ jQuery(function ($) {
 
     }());
 
+    // ------------------------------------------------------------------
+    // jQuery for scroll down
+    // ------------------------------------------------------------------
+    (function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() == 0 || $(this).scrollTop() >= 100) {
+                $('#toDown').fadeIn();
+            } else {
+                $('#toDown').fadeOut();
+            }
+        });
+
+        $('#toDown').on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 800 }, 600);;
+        });
+
+    }());
+
 
     // -------------------------------------------------------------
     // testimonialSlider
@@ -131,6 +150,35 @@ jQuery(function ($) {
         nextArrow: '',
         pauseOnHover: true,
 
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+
     });
     $('.history-slider').slick({
         slidesToShow: 1,
@@ -156,7 +204,7 @@ jQuery(function ($) {
         show_media: true,                                //Boolean: if false, doesn't display any post images
         media_min_width: 300,                           //Integer: Only get posts with images larger than this value
         template_html:                                  //String: HTML used for each post. This overrides the 'template' filename option
-            '<article class="col-md-12 facebook-post"> \
+            '<article class="col-md-6 facebook-post"> \
                 <a class="pull-left" href="{{=it.author_link}}" target="_blank"> \
                         <img class="media-object" src="{{=it.author_picture}}">\
                 </a>\
@@ -174,13 +222,39 @@ jQuery(function ($) {
         callback: function () {                          //Function: This is a callback function which is evoked when all the posts are collected and displayed
 
             $('.social-feed-slider').slick({
-                slidesToShow: 1,
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 4000,
                 prevArrow: '',
                 nextArrow: '',
                 pauseOnHover: true,
+                adaptiveHeight: false,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            infinite: true,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+
             });
         }
     });

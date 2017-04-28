@@ -1,3 +1,9 @@
+a{
+      color: #CB4335;
+}
+a:hover,a:focus{
+      color: #E74C3C;
+}
 .thumbnail {
       position: relative;
 }
@@ -6,6 +12,28 @@
       display: block;
       width: 100%;
       height: auto;
+}
+#toDown {
+      margin-top: 15%;
+      font-size: 20px;
+}
+
+#toDown .fa{
+      animation: moveDown 2s ease-out forwards;
+      /* Safari and Chrome */
+      -webkit-animation:moveDown 2s;
+      animation-iteration-count: 100;
+}
+
+@keyframes moveDown
+{ from {margin-top:0; opacity: 0;}
+      to {margin-top:20px; opacity: 1}
+}
+
+@-webkit-keyframes moveDown /* Safari and Chrome */
+{
+      from {margin-top:0; opacity: 0;}
+      to {margin-top:20px; opacity: 1}
 }
 
 .business-overlay {
@@ -28,6 +56,19 @@
 
 .ig-services .caption h3 {
       text-align: center;
+}
+
+.ig-news .caption h3:hover {
+      opacity: 0.7;
+      display: inline-block;
+}
+.caption h3  a{
+      color: #313131;
+}
+
+.blog-tag {
+      color: #cb4335;
+      text-transform: uppercase;
 }
 
 .thumbnail:hover .business-overlay {
