@@ -252,8 +252,8 @@ jQuery(function ($) {
                 <a class="pull-left" href="{{=it.author_link}}" target="_blank"> \
                         <img class="media-object" src="{{=it.author_picture}}">\
                 </a>\
-            <i class="fa fa-facebook pull-right" aria-hidden="true"></i>\
-            <div class="fb-content pull-left">\
+            <i class="fa fa-facebook" aria-hidden="true"></i>\
+            <div class="fb-content">\
                 <h3>{{=it.author_name}}</h3>\
                 <p>{{=it.text}}</p><br><a href="{{=it.link}}" class="btn btn-primary" target="_blank">read more</a>\
              </div>\
@@ -261,31 +261,30 @@ jQuery(function ($) {
         date_format: "ll",                              //String: Display format of the date attribute (see http://momentjs.com/docs/#/displaying/format/)
         date_locale: "en",                              //String: The locale of the date (see: http://momentjs.com/docs/#/i18n/changing-locale/)
         callback: function () {                          //Function: This is a callback function which is evoked when all the posts are collected and displayed
-
-            $('.social-feed-slider').slick({
+            var container = $('.social-feed-slider');
+            var settings = {
                 slidesToShow: 3,
                 slidesToScroll: 1,
-                variableWidth: true,
-                autoplay: true,
+                // autoplay: true,
                 autoplaySpeed: 4000,
                 prevArrow: '',
                 nextArrow: '',
                 pauseOnHover: true,
-                adaptiveHeight: false,
+                adaptiveHeight: true,
                 responsive: [
                     {
                         breakpoint: 1024,
                         settings: {
                             slidesToShow: 3,
                             slidesToScroll: 1,
-                            infinite: true,
                         }
                     },
                     {
-                        breakpoint: 768,
+                        breakpoint: 840,
                         settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+
                         }
                     },
                     {
@@ -294,24 +293,33 @@ jQuery(function ($) {
                             slidesToShow: 1,
                             slidesToScroll: 1
                         }
+                    },
+                    {
+                        breakpoint: 320,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
                     }
                 ]
 
-            });
+            };
+            container.slick(settings);
+            resetSlick(container, settings)
         }
     });
 
-    function resetSlick($slick_slider, settings) {
-        $(window).on('resize', function() {
+    function resetSlick(slick_slider, settings) {
+        $(window).on('resize', function () {
             if ($(window).width() < 320) {
-                if ($slick_slider.hasClass('slick-initialized')) {
-                    $slick_slider.slick('unslick');
+                if (slick_slider.hasClass('slick-initialized')) {
+                    slick_slider.slick('unslick');
                 }
                 return
             }
 
-            if (!$slick_slider.hasClass('slick-initialized')) {
-                return $slick_slider.slick(settings);
+            if (!slick_slider.hasClass('slick-initialized')) {
+                return slick_slider.slick(settings);
             }
         });
     }
