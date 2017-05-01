@@ -1,9 +1,16 @@
-a{
+a {
       color: #CB4335;
 }
-a:hover,a:focus{
+
+a:hover, a:focus {
       color: #E74C3C;
 }
+
+.footer .footer-widget .social-links li a:hover {
+      color: #ffffff;
+      background-color: #E74C3C;
+}
+
 .thumbnail {
       position: relative;
 }
@@ -13,27 +20,46 @@ a:hover,a:focus{
       width: 100%;
       height: auto;
 }
+
 #toDown {
       margin-top: 15%;
       font-size: 20px;
 }
 
-#toDown .fa{
+@media screen and (max-width: 768px) {
+      #toDown {
+            display: none;
+      }
+}
+
+#toDown .fa {
       animation: moveDown 2s ease-out forwards;
       /* Safari and Chrome */
-      -webkit-animation:moveDown 2s;
+      -webkit-animation: moveDown 2s;
       animation-iteration-count: 100;
 }
 
-@keyframes moveDown
-{ from {margin-top:0; opacity: 0;}
-      to {margin-top:20px; opacity: 1}
+@keyframes moveDown {
+      from {
+            margin-top: 0;
+            opacity: 0;
+      }
+      to {
+            margin-top: 20px;
+            opacity: 1
+      }
 }
 
 @-webkit-keyframes moveDown /* Safari and Chrome */
 {
-      from {margin-top:0; opacity: 0;}
-      to {margin-top:20px; opacity: 1}
+      from {
+            margin-top: 0;
+            opacity: 0;
+      }
+      to {
+            margin-top: 20px;
+            opacity: 1
+      }
 }
 
 .business-overlay {
@@ -62,7 +88,8 @@ a:hover,a:focus{
       opacity: 0.7;
       display: inline-block;
 }
-.caption h3  a{
+
+.caption h3 a {
       color: #313131;
 }
 
@@ -98,6 +125,14 @@ video {
 
 .client-logos img {
       
+}
+
+.client-logos .col-md-2 {
+      display: inline-block;
+}
+
+.journey .col-md-12 {
+      display: inline-block;
 }
 
 #ig-video-bg {
@@ -146,10 +181,13 @@ video {
 }
 
 .facebook-post {
-      border: 1px solid #c3c3c3;
       padding: 30px;
       background: #3B5998;
       color: #fff;
+      display: inline-block;
+      border: 1px solid #3b3998;
+      vertical-align: middle;
+      height: 360px;
 }
 
 .facebook-post h3 {
@@ -191,13 +229,18 @@ video {
       font-family: 'Courgette', cursive;
       font-size: 50px;
       color: #fff;
-      padding: 7% 3.5%;
+      padding: 7% 0%;
       border-radius: 100%;
+      text-align: center;
       background: #cd3433; /* For browsers that do not support gradients */
       background: -webkit-linear-gradient(#CB4335, #cd3433); /* For Safari 5.1 to 6.0 */
       background: -o-linear-gradient(#CB4335, #cd3433); /* For Opera 11.1 to 12.0 */
       background: -moz-linear-gradient(#CB4335, #cd3433); /* For Firefox 3.6 to 15 */
       background: linear-gradient(#CB4335, #cd3433); /* Standard syntax */
+}
+
+.journey-career .journey .col-md-2, .journey-career .journey .col-md-10 {
+      display: inline-block;
 }
 
 .journey-career .journey div p {
@@ -210,6 +253,23 @@ video {
       padding: 15px;
       border: 1px solid #CB4335;
       margin: 0 15px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 980px) {
+      .journey-career .journey header {
+            border-radius: 0;
+      }
+      
+      .journey-career .journey .col-md-2, .journey-career .journey .col-md-10 {
+            display: block;
+      }
+      
+      .journey-career .journey div p {
+            font-size: 20px;
+            color: #000000;
+            padding: 45px 0 0;
+      }
+      
 }
 
 .fix-height-305 {
@@ -242,6 +302,7 @@ article.category-item {
 
 .navbar-footer li {
       width: 33.333%;
+      display: inline-block;
 }
 
 .social-icons {
@@ -273,28 +334,15 @@ article.category-item {
       text-align: center;
       padding: 3px;
 }
-.social-icons li sub{
+
+.social-icons li sub {
       color: #fff;
 }
+
 .sticky-nav a.navbar-brand img {
       height: 55px;
 }
-/*.social-icons .fa-facebook {
-      background:#3b5998
-}
 
-.social-icons .fa-linkedin {
-      background:#007bb6
-}
-
-.social-icons .fa-twitter {
-      background:#00aced
-}
-
-.social-icons .fa-google-plus {
-      background:#dd4b39
-}
-*/
 .social-icons ul li a i {
       transition: all 0.2s ease-in-out;
 }
@@ -306,7 +354,10 @@ article.category-item {
 
 @media screen and (min-width: 768px) {
       .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-            margin-left: 0px;
+            margin-left: 0;
             margin-top: 20px;
+      }
+      #toDown{
+            display: none !important;
       }
 }

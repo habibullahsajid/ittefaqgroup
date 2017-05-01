@@ -57,7 +57,6 @@ jQuery(function ($) {
     (function () {
 
 
-
         $('body').append('<div id="toTop"><i class="fa fa-angle-up"></i></div>');
         $(window).scroll(function () {
             if ($(this).scrollTop() != 0) {
@@ -88,7 +87,8 @@ jQuery(function ($) {
 
         $('#toDown').on('click', function (e) {
             e.preventDefault();
-            $('html, body').animate({ scrollTop: 800 }, 600);;
+            $('html, body').animate({scrollTop: 800}, 600);
+            ;
         });
 
     }());
@@ -141,7 +141,11 @@ jQuery(function ($) {
     //---- Slick Slider-----------------
     //----------------------------------
 
-    $('.client-logos').slick({
+    var slick_slider, settings;
+
+
+    slick_slider = $('.client-logos');
+    settings = {
         slidesToShow: 6,
         slidesToScroll: 1,
         autoplay: true,
@@ -154,17 +158,55 @@ jQuery(function ($) {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+
+    };
+    slick_slider.slick(settings);
+    resetSlick(slick_slider, settings);
+
+    slick_slider = $('.history-slider');
+    settings = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        prevArrow: '',
+        nextArrow: '',
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
                 }
             },
             {
@@ -178,17 +220,8 @@ jQuery(function ($) {
             // settings: "unslick"
             // instead of a settings object
         ]
-
-    });
-    $('.history-slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        prevArrow: '',
-        nextArrow: '',
-        pauseOnHover: true
-    });
+    };
+    slick_slider.slick(settings);
     //----------------------------------
     //---- social feed-----------------
     //----------------------------------
@@ -199,51 +232,59 @@ jQuery(function ($) {
             limit: 3,                                   //Integer: max number of posts to load
             access_token: '191042970944652|NGJyz1d0Kclt2XO3AyrjHmrKOHo'  //String: "APP_ID|APP_SECRET"
         },
+        /*twitter:{
+         accounts: ['@spacex'],                      //Array: Specify a list of accounts from which to pull tweets
+         limit: 2,                                   //Integer: max number of tweets to load
+         consumer_key: 'YOUR_CONSUMER_KEY',          //String: consumer key. make sure to have your app read-only
+         consumer_secret: 'YOUR_CONSUMER_SECRET_KEY' //String: consumer secret key. make sure to have your app read-only
+         },
+         google:{
+         accounts: ['#teslamotors'],                //Array: Specify a list of accounts from which to pull posts
+         limit: 2,                                  //Integer: max number of posts to load
+         access_token: 'YOUR_GOOGLE_PLUS_ACCESS_TOKEN'//String: G+ access token
+         },*/
         //General Settings
         length: 400,                                     //Integer: For posts with text longer than this length, show an ellipsis.
         show_media: true,                                //Boolean: if false, doesn't display any post images
         media_min_width: 300,                           //Integer: Only get posts with images larger than this value
         template_html:                                  //String: HTML used for each post. This overrides the 'template' filename option
-            '<article class="col-md-6 facebook-post"> \
+            '<article class=" facebook-post col-md-4"> \
                 <a class="pull-left" href="{{=it.author_link}}" target="_blank"> \
                         <img class="media-object" src="{{=it.author_picture}}">\
                 </a>\
-            <i class="fa fa-facebook pull-right" aria-hidden="true"></i>\
-            <div class="fb-content pull-left">\
+            <i class="fa fa-facebook" aria-hidden="true"></i>\
+            <div class="fb-content">\
                 <h3>{{=it.author_name}}</h3>\
                 <p>{{=it.text}}</p><br><a href="{{=it.link}}" class="btn btn-primary" target="_blank">read more</a>\
              </div>\
             </article>',
         date_format: "ll",                              //String: Display format of the date attribute (see http://momentjs.com/docs/#/displaying/format/)
         date_locale: "en",                              //String: The locale of the date (see: http://momentjs.com/docs/#/i18n/changing-locale/)
-        moderation: function (content) {                 //Function: if returns false, template will have class hidden
-            return (content.text) ? content.text.indexOf('fuck') == -1 : true;
-        },
         callback: function () {                          //Function: This is a callback function which is evoked when all the posts are collected and displayed
-
-            $('.social-feed-slider').slick({
+            var container = $('.social-feed-slider');
+            var settings = {
                 slidesToShow: 3,
                 slidesToScroll: 1,
-                autoplay: true,
+                // autoplay: true,
                 autoplaySpeed: 4000,
                 prevArrow: '',
                 nextArrow: '',
                 pauseOnHover: true,
-                adaptiveHeight: false,
+                adaptiveHeight: true,
                 responsive: [
                     {
                         breakpoint: 1024,
                         settings: {
                             slidesToShow: 3,
                             slidesToScroll: 1,
-                            infinite: true,
                         }
                     },
                     {
-                        breakpoint: 600,
+                        breakpoint: 840,
                         settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+
                         }
                     },
                     {
@@ -252,12 +293,37 @@ jQuery(function ($) {
                             slidesToShow: 1,
                             slidesToScroll: 1
                         }
+                    },
+                    {
+                        breakpoint: 320,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
                     }
                 ]
 
-            });
+            };
+            container.slick(settings);
+            resetSlick(container, settings)
         }
     });
+
+    function resetSlick(slick_slider, settings) {
+        $(window).on('resize', function () {
+            if ($(window).width() < 320) {
+                if (slick_slider.hasClass('slick-initialized')) {
+                    slick_slider.slick('unslick');
+                }
+                return
+            }
+
+            if (!slick_slider.hasClass('slick-initialized')) {
+                return slick_slider.slick(settings);
+            }
+        });
+    }
+
 }); // JQuery end
 
 
