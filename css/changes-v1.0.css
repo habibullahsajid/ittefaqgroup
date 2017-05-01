@@ -361,3 +361,10 @@ article.category-item {
             display: none !important;
       }
 }
+
+/*Version 1.1*/
+/* Contact Page */
+
+.single-page-title{
+      background: url(../img/hero-bg.jpg) no-repeat bottom;
+}

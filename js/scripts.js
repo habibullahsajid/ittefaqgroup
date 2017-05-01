@@ -265,7 +265,7 @@ jQuery(function ($) {
             var settings = {
                 slidesToShow: 3,
                 slidesToScroll: 1,
-                // autoplay: true,
+                autoplay: true,
                 autoplaySpeed: 4000,
                 prevArrow: '',
                 nextArrow: '',
@@ -309,6 +309,10 @@ jQuery(function ($) {
         }
     });
 
+
+    // ----------------------------------------------------------------
+    // Slick Responsive reset
+    // ----------------------------------------------------------------
     function resetSlick(slick_slider, settings) {
         $(window).on('resize', function () {
             if ($(window).width() < 320) {
@@ -323,6 +327,59 @@ jQuery(function ($) {
             }
         });
     }
+
+    // -------------------------------------------------------------
+    // Google Map
+    // -------------------------------------------------------------
+
+    (function () {
+
+        if ($('#googleMap').length > 0) {
+
+            //set your google maps parameters
+            var $latitude = 24.8162854,
+                $longitude = 67.0063777,
+                $map_zoom = 12; /* ZOOM SETTING */
+
+            //google map custom marker icon
+            var $marker_url = 'img/google-map-marker.png';
+
+            //we define here the style of the map
+            var style = [{
+                "stylers": [{
+                    "hue": "#000"
+                }, {
+                    "saturation": -100
+                }, {
+                    "gamma": 2.15
+                }, {
+                    "lightness": 12
+                }]
+            }];
+
+            //set google map options
+            var map_options = {
+                center: new google.maps.LatLng($latitude, $longitude),
+                zoom: $map_zoom,
+                panControl: false,
+                zoomControl: false,
+                mapTypeControl: false,
+                streetViewControl: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                scrollwheel: false,
+                styles: style,
+            }
+            //initialize the map
+            var map = new google.maps.Map(document.getElementById('googleMap'), map_options);
+            //add a custom marker to the map
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng($latitude, $longitude),
+                map: map,
+                visible: true,
+                icon: $marker_url
+            });
+        }
+    }());
 
 }); // JQuery end
 
